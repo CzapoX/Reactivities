@@ -121,9 +121,9 @@ class ActivityStore {
         });
       } catch (error) {
         runInAction("error getting Activity", () => {
-          console.log(error);
           this.loadingInitial = false;
         });
+        console.log(error);
       }
     }
   };
