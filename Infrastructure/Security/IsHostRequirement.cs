@@ -35,7 +35,7 @@ namespace Infrastructure.Security
 
             var host = activity.UserActivities.FirstOrDefault(x => x.IsHost);
 
-            if (host?.AppUser.UserName == currentUserName)
+            if (host?.AppUser?.UserName == currentUserName)
                 context.Succeed(requirement);
             
             return Task.CompletedTask;
