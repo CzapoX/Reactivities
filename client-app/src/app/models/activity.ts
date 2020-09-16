@@ -6,18 +6,28 @@ export interface IActivity {
   date: Date;
   city: string;
   venue: string;
+  isGoing: boolean;
+  isHost: boolean;
+  attendees: IAttendee[];
 }
 
-export class ActivityFormValues implements Partial<IActivity>{
+export class ActivityFormValues implements Partial<IActivity> {
   id?: string = undefined;
-  title: string ='';
-  description: string = '';
-  category: string = '';
+  title: string = "";
+  description: string = "";
+  category: string = "";
   date: Date = undefined;
-  city: string = '';
-  venue: string = '';
+  city: string = "";
+  venue: string = "";
 
-  constructor(init?: IActivity){
+  constructor(init?: IActivity) {
     Object.assign(this, init);
   }
+}
+
+export interface IAttendee {
+  username: string;
+  displayName: string;
+  image: string;
+  isHost: boolean;
 }
