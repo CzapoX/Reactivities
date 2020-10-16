@@ -16,7 +16,7 @@ import NotFound from "./NotFound";
 import { ToastContainer } from "react-toastify";
 import { RootStoreContext } from "../stores/rootStore";
 import { LoadingComponent } from "./LoadingComponent";
-import ModalContainer from "../../common/modals/ModalContainer";
+import ModalContainer from "../common/modals/ModalContainer";
 import ProfilePage  from "../../features/profiles/ProfilePage";
 
 const App: React.FC<RouteComponentProps> = ({ location }) => {

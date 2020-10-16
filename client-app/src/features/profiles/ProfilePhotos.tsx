@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useContext } from "react";
 import { Card, Header, Image, Button, Grid, Tab } from "semantic-ui-react";
 import { RootStoreContext } from "../../app/stores/rootStore";
-import { PhotoUploadWidget } from "../../common/photoUpload/PhotoUploadWidget";
+import { PhotoUploadWidget } from "../../app/common/photoUpload/PhotoUploadWidget";
 
 const ProfilePhotos = () => {
   const rootStore = useContext(RootStoreContext);

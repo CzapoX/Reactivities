@@ -86,7 +86,9 @@ export default class ProfileStore {
     try {
       await agent.Profiles.deletePhoto(photo.id);
       runInAction(() => {
-        this.profile.photos = this.profile.photos.filter(a => a.id !== photo.id);
+        this.profile.photos = this.profile.photos.filter(
+          (a) => a.id !== photo.id
+        );
         this.loading = false;
       });
     } catch (error) {
@@ -95,6 +97,22 @@ export default class ProfileStore {
       runInAction(() => {
         this.loading = false;
       });
+    }
+  };
+
+  @action updateProfile = async (profile: Partial<IProfile>) => {
+    try {
+      await agent.Profiles.updateProfile(profile);
+      runInAction(() => {
+        if (
+          profile.displayName !== this.rootStore.userStore.user!.displayName
+        ) {
+          this.rootStore.userStore.user!.displayName = profile.displayName!;
+        }
+        this.profile = { ...this.profile, ...profile };
+      });
+    } catch (error) {
+      toast.error("Problem updating profile");
     }
   };
 }

@@ -5,11 +5,11 @@ import { v4 as uuid } from "uuid";
 import { observer } from "mobx-react-lite";
 import { RouteComponentProps } from "react-router-dom";
 import { Form as FinalForm, Field } from "react-final-form";
-import { TextInput } from "../../../common/form/TextInput";
-import { TextAreaInput } from "../../../common/form/TextAreaInput";
-import { SelectInput } from "../../../common/form/SelectInput";
-import { category } from "../../../common/options/categoryOptions";
-import { DateInput } from "../../../common/form/DateInput";
+import { TextInput } from "../../../app/common/form/TextInput";
+import { TextAreaInput } from "../../../app/common/form/TextAreaInput";
+import { SelectInput } from "../../../app/common/form/SelectInput";
+import { category } from "../../../app/common/options/categoryOptions";
+import { DateInput } from "../../../app/common/form/DateInput";
 import {
   combineValidators,
   isRequired,
