@@ -275,7 +275,7 @@ namespace Persistence
                                 IsHost = false,
                                 DateJoined = DateTime.Now.AddMonths(8)
                             },
-                        }
+                        },
                     }
                 };
 
